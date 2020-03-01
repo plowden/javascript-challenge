@@ -20,16 +20,13 @@ filterBtn.on("click", function() {
           printRow = true; 
           clearTable = false; 
           row = tbody.append("tr");
-          cell = row.append("td");
-          cell.text(value);
         } else {
           printRow = false;
         }
-      } else {
-        if (printRow === true) {
-          cell = row.append("td");
-          cell.text(value);
-        }
+      }
+      if (printRow === true) {
+        cell = row.append("td");
+        cell.text(value);
       }
     });
   });
